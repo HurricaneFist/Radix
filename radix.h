@@ -9,7 +9,7 @@
  * different radices ranging from 2 to 36. TODO: Extend capability to convert to
  * base-1 (though it can convert FROM base-1 just fine)
  * 
- * Copyright 2014 LastWhisper (https://github.com/LastWhisper) 
+ * © 2014 LastWhisper (https://github.com/LastWhisper) 
  */
 
 std::string convert(int n, int radix) {
