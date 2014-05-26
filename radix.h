@@ -4,6 +4,14 @@
 #include <cmath>
 #include <string>
 
+/**
+ * This header file contains algorithms for converting decimal numbers to (and from)
+ * different radices ranging from 2 to 36. TODO: Extend capability to convert to
+ * base-1 (though it can convert FROM base-1 just fine)
+ * 
+ * Copyright 2014 LastWhisper (https://github.com/LastWhisper) 
+ */
+
 std::string convert(int n, int radix) {
 	if (n == 0)
 		return "0"; // This is necessary since logf(0) creates a wormhole
