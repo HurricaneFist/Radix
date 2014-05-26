@@ -19,9 +19,17 @@ string convert(int n, int radix) {
 	return number;
 }
 
-int revert(string number, int radix); // TODO
+int revert(string number, int radix) {
+	int n = 0;
+	string digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
+	for (int i = 0; i < number.size(); i++)
+		n += digits.find(number[i]) * (int) pow(radix, number.size()-1-i);
+		
+	return n;
+}
 
 int main() {
-	for (int i = 1; i <= 65536; i *= 16)
-		cout << convert(i, 16) << endl; // hexadecimal numbers
+	cout << "1000 in hexadecimal: " << convert(1000, 16) << endl
+	     << "3E8 in decimal: "      << revert("3E8", 16);
 }
