@@ -19,6 +19,6 @@ You may also want to transvert from a certain radix to another (returning a __st
 transvert("3E8", 16, 18) // returns "31A"
 ```
 
-Keep in mind that even when calling `transvert()` with a third parameter less than 11, a string is still returned.
+Keep in mind that even when calling `transvert()` with a third parameter of 10 or less, a string is still returned.
 
 Copyright © 2014 LastWhisper (https://github.com/LastWhisper/)
