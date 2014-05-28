@@ -21,8 +21,8 @@ std::string convert(unsigned long long n, int radix) {
 	unsigned long long j = n, k = n;
 	for (int i = (int)(logf(n)/logf(radix)); i >= 0; i--) {
 		j = k;
-		k %= (int) pow(radix, i);
-		number += digits[(j - k) / (int) pow(radix, i)];
+		k %= (unsigned long long) pow(radix, i);
+		number += digits[(j - k) / (unsigned long long) pow(radix, i)];
 	}
 	
 	return number;
