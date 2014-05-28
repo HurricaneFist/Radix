@@ -12,13 +12,13 @@
  * https://github.com/LastWhisper
  */
 
-std::string convert(int n, int radix) {
+std::string convert(unsigned long long n, int radix) {
 	if (n == 0)
 		return "0"; // This is necessary since logf(0) creates a wormhole
 
 	std::string number, digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
-	int j = n, k = n;
+	unsigned long long j = n, k = n;
 	for (int i = (int)(logf(n)/logf(radix)); i >= 0; i--) {
 		j = k;
 		k %= (int) pow(radix, i);
@@ -28,12 +28,12 @@ std::string convert(int n, int radix) {
 	return number;
 }
 
-int revert(std::string number, int radix) {
-	int n = 0;
+unsigned long long revert(std::string number, int radix) {
+	unsigned long long n = 0;
 	std::string digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	for (int i = 0; i < number.size(); i++)
-		n += digits.find(number[i]) * (int) pow(radix, number.size()-1-i);
+		n += digits.find(number[i]) * (unsigned long long) pow(radix, number.size()-1-i);
 		
 	return n;
 }
