@@ -38,7 +38,7 @@ int revert(std::string number, int radix) {
 	return n;
 }
 
-std::string transform(std::string number, int original_radix, int new_radix) {
+std::string transvert(std::string number, int original_radix, int new_radix) {
 	return convert(revert(number, original_radix), new_radix);
 }
 
