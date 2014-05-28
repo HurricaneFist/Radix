@@ -17,8 +17,14 @@ const std::string DIGITS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 std::string convert(unsigned long long n, int radix) {
 	if (n == 0)
 		return "0"; // This is necessary since logf(0) creates a wormhole
-
+		
 	std::string number;
+	
+	if (radix == 1) {
+		for (int i = 0; i < n; i++)
+			number += "1";
+		return number;
+	}
 	
 	unsigned long long j = n, k = n;
 	for (int i = (int)(logf(n)/logf(radix)); i >= 0; i--) {
@@ -38,7 +44,7 @@ unsigned long long revert(std::string number, int radix) {
 		
 	return n;
 }
-
+        
 std::string transvert(std::string number, int original_radix, int new_radix) {
 	return convert(revert(number, original_radix), new_radix);
 }
