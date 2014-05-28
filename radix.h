@@ -6,8 +6,7 @@
 
 /**
  * This header file contains algorithms for converting decimal numbers to (and from)
- * different radices ranging from 2 to 36. TODO: Extend capability to convert to
- * base-1 (though it can convert FROM base-1 just fine)
+ * different radices ranging from 1 to 36.
  * 
  * https://github.com/LastWhisper
  */
