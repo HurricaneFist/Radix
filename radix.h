@@ -8,7 +8,7 @@
  * This header file contains algorithms for converting decimal numbers to (and from)
  * different radices ranging from 1 to 36.
  * 
- * https://github.com/LastWhisper
+ * https://github.com/HurricaneFist
  */
  
 const std::string DIGITS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
