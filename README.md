@@ -19,4 +19,4 @@ You may also want to transvert from a certain radix to another (returning a __st
 transvert("3E8", 16, 18) // returns "31A"
 ```
 
-Copyright © 2014 LastWhisper (https://github.com/LastWhisper/)
+Copyright © 2014 HurricaneFist (https://github.com/HurricaneFist/)
